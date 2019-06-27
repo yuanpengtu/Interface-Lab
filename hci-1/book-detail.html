@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>图书检索</title>
+
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="plugins/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="plugins/slick-carousel/slick/slick-theme.css" rel="stylesheet">
+    <link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+    <link href="plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="plugins/grumble/css/grumble.min.css" rel="stylesheet">
+    <link href="plugins/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="css/hover.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="body-wrapper">
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-lg-9 offset-lg-0">
+                    <div style="margin-top: 20px">
+                        <a href="index.html">
+                            <h2>图书检索</h2>
+                        </a>
+                    </div>
+                </div>
+                <div div class="col-md-10 offset-md-1 col-lg-3 offset-lg-0">
+                    <div class="header">
+                        <a href="./login.html"><i class="fa fa-user icon-user"></i></a>
+                    </div>
+                    <div class="header-info">
+                        <p>您还未登录>_<!</p> <p>单击跳转至登录页！</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="book-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-9">
+                    <div class="widget-search">
+                        
+                        <div class="icon-help-box">
+                            <a id="grumble1" href=""><i class="fa fa-question hvr-grow" ></i></a>
+                        </div>
+                        <div class="help-info">
+                            <p>显示图书的基本信息</p>
+                        </div>
+                        <h4>人机交互:用户体验创新的原理</h4>
+                        <table class="table table-detail">
+                            <tr>
+                                <td class="detail-left">责任者</td>
+                                <td>(韩) 金振宇著</td>
+                            </tr>
+                            <tr>
+                                <td class="detail-left">出版发行项</td>
+                                <td>北京：清华大学出版社，2014</td>
+                            </tr>
+                            <tr>
+                                <td>载体形态项</td>
+                                <td>180页：图；26cm</td>
+                            </tr>
+                            <tr>
+                                <td>学科主题</td>
+                                <td>人机系统-研究</td>
+                            </tr>
+                            <tr>
+                                <td>提要文摘附注</td>
+                                <td>本书的目的是让更多人能轻松的理解人机交互和用户体验理论体系，即使是第一次接触人机交互与用户体验的人们也可以轻松掌握其基本理论。</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="widget-search">
+                        
+                        <div class="icon-help-box">
+                            <i class="fa fa-question hvr-grow" ></i>
+                        </div>
+                        <div class="help-info">
+                            <p>显示该图书在同济大学各个图书馆中的位置</p>
+                        </div>
+                        <h4>馆藏信息</h4>
+                        <table class="table save-info">
+                            <thead>
+                                <tr>
+                                    <td>索书号</td>
+                                    <td>条号码</td>
+                                    <td>年卷期</td>
+                                    <td>馆藏地</td>
+                                    <td>状态</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TB18/ZJ479</td>
+                                    <td>02855959</td>
+                                    <td>2014.11</td>
+                                    <td>嘉定校区图书馆(中文) 九楼</td>
+                                    <td class="info-available">可借</td>
+                                </tr>
+                                <tr>
+                                    <td>TB18/ZJ479</td>
+                                    <td>02855958</td>
+                                    <td>2014.11</td>
+                                    <td>嘉定校区图书馆(中文) 九楼</td>
+                                    <td class="info-available">可借</td>
+                                </tr>
+                                <tr>
+                                    <td>TB18/ZJ479</td>
+                                    <td>02855957</td>
+                                    <td>2014.11</td>
+                                    <td>总馆科技图书阅览室（中文） 书库三楼（南）</td>
+                                    <td class="info-available">可借</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-search">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="widget-search detail-search-fix">
+                        <div class="detail-search-back hvr-grow">
+                            <a href="search-result.html" title="返回搜索结果">
+                                <i class="fa fa-reply"></i>
+                            </a>
+                        </div>
+
+                        <h4 class="detail-search-title">搜索结果</h4>
+                        <div class="list-group">
+                            <a href="" class="active list-group-item detail-li">人机交互:用户体验创新的原理</a>
+                            <a href="" class="list-group-item detail-li">人机交互概论</a>
+                            <a href="" class="list-group-item detail-li">人机交互设计</a>
+                            <a href="" class="list-group-item detail-li">人机交互.第五版</a>
+                            <a href="" class="list-group-item detail-li">人机交互技术</a>
+                            <a href="" class="list-group-item detail-li">人机交互及实验设计</a>
+                            <a href="" class="list-group-item detail-li">人机交互基础教程</a>
+                            <a href="" class="list-group-item detail-li">人机交互</a>
+                            <a href="" class="list-group-item detail-li">人机交互中的情感虚拟人技术</a>
+                            <a href="" class="list-group-item detail-li">人机交互与戏剧表演</a>
+                            </ul>
+                        </div>
+                        <div class="pagination-box justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="detail-pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item  active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/tether/js/tether.min.js"></script>
+    <script src="plugins/raty/jquery.raty-fa.js"></script>
+    <script src="plugins/bootstrap/dist/js/popper.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <script src="plugins/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="plugins/grumble/js/jquery.grumble.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月', '一月', '二月', '三月', '四月'],
+                datasets: [{
+                    label: '借阅趋势(过去一年)',
+                    backgroundColor: 'rgb(251, 173, 76)',
+                    borderColor: 'rgb(251, 173, 76)',
+                    data: [0, 1, 0, 0, 0, 0, 0, 2, 2, 0, 0, 1]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }]
+                }
+            }
+        });
+
+    
+    </script>
+
+</body>
+
+</html>
